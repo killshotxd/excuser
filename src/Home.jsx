@@ -12,11 +12,26 @@ const Home = () => {
   // Functions
   const [officePost, setOfficePost] = useState("");
   const [familyPost, setFamilyPost] = useState("");
+  const [gamingPost, setGamingPost] = useState("");
+
   const office = () => {
     axios.get(URL_OFFICE).then((response) => {
       setOfficePost(response.data[0].excuse);
     });
   };
+
+  const family = () => {
+    axios.get(URL_FAMILY).then((response) => {
+      setFamilyPost(response.data[0].excuse);
+    });
+  };
+
+  const gaming = () => {
+    axios.get(URL_GAMING).then((response) => {
+      setGamingPost(response.data[0].excuse);
+    });
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -28,8 +43,13 @@ const Home = () => {
         </div>
 
         <div className={styles.excuses2}>
-          <button onClick={office}>Excuse for Family 🙄</button>
+          <button onClick={family}>Excuse for Family 🙄</button>
           <p>{familyPost}</p>
+        </div>
+
+        <div className={styles.excuses3}>
+          <button onClick={gaming}>Excuse for Gaming 🙄</button>
+          <p>{gamingPost}</p>
         </div>
       </div>
     </div>

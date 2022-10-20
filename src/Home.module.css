@@ -6,15 +6,22 @@
 
 .excuses {
   display: flex;
-  gap: 10rem;
+  gap: 2rem;
   align-items: center;
+  flex-direction: column;
 }
 
 .excuses p {
-  width: 20vw;
-  font-size: x-large;
+  width: 80vw;
+  font-size: 1.5rem;
   font-weight: 600;
   color: orange;
+  text-align: center;
+  border: 2px solid #fa6400;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header {

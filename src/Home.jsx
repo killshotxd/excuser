@@ -38,17 +38,23 @@ const Home = () => {
         <h2>Generate Random Excuses 😝</h2>
 
         <div className={styles.excuses}>
-          <button onClick={office}>Excuse for Office 🙄</button>
+          <button className={styles.button5} onClick={office}>
+            Excuse for Office 🙄
+          </button>
           <p>{officePost}</p>
         </div>
 
-        <div className={styles.excuses2}>
-          <button onClick={family}>Excuse for Family 🙄</button>
+        <div className={styles.excuses}>
+          <button className={styles.button5} onClick={family}>
+            Excuse for Family 🙄
+          </button>
           <p>{familyPost}</p>
         </div>
 
-        <div className={styles.excuses3}>
-          <button onClick={gaming}>Excuse for Gaming 🙄</button>
+        <div className={styles.excuses}>
+          <button className={styles.button5} onClick={gaming}>
+            Excuse for Gaming 🙄
+          </button>
           <p>{gamingPost}</p>
         </div>
       </div>
